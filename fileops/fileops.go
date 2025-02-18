@@ -6,11 +6,11 @@ import (
 	"os"
 )
 
-func writeFloatToFile(floatValue float64, file string) {
+func WriteFloatToFile(floatValue float64, file string) {
 	os.WriteFile(file, []byte(fmt.Sprint(floatValue)), 0644)
 }
 
-func readFloatFromFile(file string) (floatValue float64, err error) {
+func ReadFloatFromFile(file string) (floatValue float64, err error) {
 	data, err := os.ReadFile(file)
 
 	if err != nil {
